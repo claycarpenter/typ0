@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>typ0</title>
+<link href="assets/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript" src="js/typ0.js"></script>
+
+<script>
+	function init() {
+		var game = new typ0.Game();
+		game.init($('#screenContentPanel'), $('#fileUploadInput'));
+	}
+
+	$(document).ready(init);
+</script>
+<style type="text/css">
+#fileUploadInput {
+	visiblity: hidden;
+	width: 0;
+	height: 0;
+}
+</style>
+</head>
+
+<body>
+	<div>
+		<input type="file" id="fileUploadInput" name="fileUploadInput" />
+	</div>
+	<div class="title">typ0</div>
+	<div class="contentPanel" id="screenContentPanel"></div>
+	<div class="buttons" id="menuButtonsPanel">
+	</div>
+</body>
+
+</html>
