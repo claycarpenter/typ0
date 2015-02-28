@@ -26,8 +26,24 @@ var projectPaths = {
         app: {
             // List of app JS scripts.
             files: [
-                // Main app logic. App init point.
-                './src/js/main.js'
+                './src/js/typ0/SimpleEventBus.js',
+				'./src/js/typ0/View.js',
+				'./src/js/typ0/SystemPromptView.js',
+				'./src/js/typ0/MenuButtonView.js',
+				'./src/js/typ0/MenuButtonPanelView.js',
+				'./src/js/typ0/MainMenuScreen.js',
+				'./src/js/typ0/ReadyScreen.js',
+				'./src/js/typ0/GameScreen.js',
+				'./src/js/typ0/GameOverScreen.js',
+				'./src/js/typ0/LineOfCode.js',
+				'./src/js/typ0/TestCode.js',
+				'./src/js/typ0/PlayerInput.js',
+				'./src/js/typ0/InputTextView.js',
+				'./src/js/typ0/TargetCodeView.js',
+				'./src/js/typ0/ScoreView.js',
+				'./src/js/typ0/FileLoader.js',
+				'./src/js/typ0/GameStats.js',
+				'./src/js/typ0/Game.js'
             ],
             
             // Target directory and filename for concatenated app JS script.
@@ -37,16 +53,26 @@ var projectPaths = {
     }
 };
 
+// TODO: The impl of these two JS copy tasks is redudant.
 gulp.task('copy-vendor-js', function () {
-    var vendorPaths = projectPaths.javaScripts.vendor;
-    var destDir = projectPaths.buildDir + vendorPaths.concatTargetDir;
+    var paths = projectPaths.javaScripts.vendor;
+    var destDir = projectPaths.buildDir + paths.concatTargetDir;
     
-    gulp.src(vendorPaths.files)
-        .pipe(concat(vendorPaths.concatFile))
+    gulp.src(paths.files)
+        .pipe(concat(paths.concatFile))
+        .pipe(gulp.dest(destDir));
+});
+
+gulp.task('copy-app-js', function () {
+    var paths = projectPaths.javaScripts.app;
+    var destDir = projectPaths.buildDir + paths.concatTargetDir;
+    
+    gulp.src(paths.files)
+        .pipe(concat(paths.concatFile))
         .pipe(gulp.dest(destDir));
 });
               
-gulp.task('prep-js', ['copy-vendor-js']);
+gulp.task('prep-js', ['copy-vendor-js', 'copy-app-js']);
 
 gulp.task('build', ['prep-js']);
 
