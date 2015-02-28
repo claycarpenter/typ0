@@ -71,9 +71,14 @@ gulp.task('copy-app-js', function () {
         .pipe(concat(paths.concatFile))
         .pipe(gulp.dest(destDir));
 });
+
+gulp.task('copy-html', function () {
+    gulp.src(['./src/html/**/*.html'])
+        .pipe(gulp.dest(projectPaths.buildDir));
+});
               
 gulp.task('prep-js', ['copy-vendor-js', 'copy-app-js']);
 
-gulp.task('build', ['prep-js']);
+gulp.task('build', ['prep-js', 'copy-html']);
 
 gulp.task('default', ['build']);
