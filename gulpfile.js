@@ -27,24 +27,24 @@ var projectPaths = {
         app: {
             // List of app JS scripts.
             files: [
-                './src/js/typ0/SimpleEventBus.js',
-				'./src/js/typ0/View.js',
-				'./src/js/typ0/SystemPromptView.js',
-				'./src/js/typ0/MenuButtonView.js',
-				'./src/js/typ0/MenuButtonPanelView.js',
-				'./src/js/typ0/MainMenuScreen.js',
-				'./src/js/typ0/ReadyScreen.js',
-				'./src/js/typ0/GameScreen.js',
-				'./src/js/typ0/GameOverScreen.js',
-				'./src/js/typ0/LineOfCode.js',
-				'./src/js/typ0/TestCode.js',
-				'./src/js/typ0/PlayerInput.js',
-				'./src/js/typ0/InputTextView.js',
-				'./src/js/typ0/TargetCodeView.js',
-				'./src/js/typ0/ScoreView.js',
-				'./src/js/typ0/FileLoader.js',
-				'./src/js/typ0/GameStats.js',
-				'./src/js/typ0/Game.js'
+                './src/js/SimpleEventBus.js',
+				'./src/js/View.js',
+				'./src/js/SystemPromptView.js',
+				'./src/js/MenuButtonView.js',
+				'./src/js/MenuButtonPanelView.js',
+				'./src/js/MainMenuScreen.js',
+				'./src/js/ReadyScreen.js',
+				'./src/js/GameScreen.js',
+				'./src/js/GameOverScreen.js',
+				'./src/js/LineOfCode.js',
+				'./src/js/TestCode.js',
+				'./src/js/PlayerInput.js',
+				'./src/js/InputTextView.js',
+				'./src/js/TargetCodeView.js',
+				'./src/js/ScoreView.js',
+				'./src/js/FileLoader.js',
+				'./src/js/GameStats.js',
+				'./src/js/Game.js'
             ],
             
             // Target directory and filename for concatenated app JS script.
