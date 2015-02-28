@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 
 var projectPaths = {
     buildDir: 'build',
+    assetsDir: '/assets',
     javaScripts: {
         vendor: {
             // List of vendor/third-party JS libraries.
@@ -76,9 +77,15 @@ gulp.task('copy-html', function () {
     gulp.src(['./src/html/**/*.html'])
         .pipe(gulp.dest(projectPaths.buildDir));
 });
+
+gulp.task('copy-css', function () {
+    var destDir = projectPaths.buildDir + projectPaths.assetsDir;
+    gulp.src(['./src/assets/**/*'])
+        .pipe(gulp.dest(destDir));
+});
               
 gulp.task('prep-js', ['copy-vendor-js', 'copy-app-js']);
 
-gulp.task('build', ['prep-js', 'copy-html']);
+gulp.task('build', ['prep-js', 'copy-html', 'copy-css']);
 
 gulp.task('default', ['build']);
