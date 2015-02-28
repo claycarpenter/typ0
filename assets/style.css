@@ -1,0 +1,93 @@
+@font-face {
+	font-family: 'perfectDosVga';
+	src: url('perfect-dos-vga.ttf'), url('perfect-dos-vga.eot');
+}
+
+body {
+	background-color: #000;
+	color: #22E01B;
+	font-family: 'perfectDosVga';
+	font-size: 14pt;
+	letter-spacing: -1px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.title {
+	font-size: 60pt;
+	letter-spacing: 15px;
+}
+
+.contentPanel {
+	margin-top: 25px;
+	height: 100px;
+}
+
+.inputPrompt {
+	margin-top: 20px;
+}
+
+.prompt {
+	width: 75px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.promptSeparator {
+	width: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.lineOfCode {
+	display: inline-block;
+}
+
+.caret {
+	font-weight: bold;
+	display: inline-block;
+	margin-left: -12px;
+}
+
+.buttons {
+	margin-top: 20px;
+}
+
+.textButton {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.textButton:hover {
+	color: #FFF;
+	cursor: pointer;
+}
+
+.disabled {
+	color: #333;
+}
+
+.disabled:hover {
+	color: #333;
+	cursor: default;
+}
+
+.scoreViewValue {
+	display: inline-block;
+	width: 90px;
+}
+
+.scoreViewLabel {
+	display: inline-block;
+	width: 100px;
+}
+
+.error {
+	color: #F00;
+}
+
+.hidden-file-upload-input {
+    visiblity: hidden;
+    width: 0;
+    height: 0;
+}
