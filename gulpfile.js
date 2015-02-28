@@ -1,6 +1,7 @@
 // Import require dependencies.
 var gulp = require('gulp'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    del = require('del');
 
 /* 
     Define project paths.
@@ -54,6 +55,10 @@ var projectPaths = {
     }
 };
 
+gulp.task('clean', function () {
+    del(projectPaths.buildDir);
+});
+
 // TODO: The impl of these two JS copy tasks is redudant.
 gulp.task('copy-vendor-js', function () {
     var paths = projectPaths.javaScripts.vendor;
@@ -88,4 +93,4 @@ gulp.task('prep-js', ['copy-vendor-js', 'copy-app-js']);
 
 gulp.task('build', ['prep-js', 'copy-html', 'copy-css']);
 
-gulp.task('default', ['build']);
+gulp.task('default', ['clean', 'build']);
