@@ -1,19 +1,4 @@
 @font-face {
-	font-family: 'dited';
-	src: url('dited.ttf'), url('dited.eot');
-}
-
-@font-face {
-	font-family: 'mayfair';
-	src: url('mayfair.ttf'), url('mayfair.eot');
-}
-
-@font-face {
-	font-family: 'ProFontWindows';
-	src: url('ProFontWindows.ttf'), url('ProFontWindows.eot');
-}
-
-@font-face {
 	font-family: 'perfectDosVga';
 	src: url('perfect-dos-vga.ttf'), url('perfect-dos-vga.eot');
 }
