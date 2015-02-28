@@ -85,3 +85,9 @@ body {
 .error {
 	color: #F00;
 }
+
+.hidden-file-upload-input {
+    visiblity: hidden;
+    width: 0;
+    height: 0;
+}
