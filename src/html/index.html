@@ -6,21 +6,6 @@
     <title>typ0</title>
     
     <link href="assets/style.css" rel="stylesheet" type="text/css" />
-
-    <!-- Vendor scripts. -->
-<script type="text/javascript" src="js/vendor.js"></script>
-
-    <!-- App scripts. -->
-    <script type="text/javascript" src="js/app.js"></script>
-
-    <script>
-        function init() {
-            var game = new typ0.Game();
-            game.init($('#screenContentPanel'), $('#fileUploadInput'));
-        }
-
-        $(document).ready(init);
-    </script>
 </head>
 
 <body>
@@ -35,6 +20,21 @@
 	<div class="contentPanel" id="screenContentPanel"></div>
 	<div class="buttons" id="menuButtonsPanel">
 	</div>
+
+    <!-- Vendor scripts. -->
+    <script type="text/javascript" src="js/vendor.js"></script>
+
+    <!-- App scripts. -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script>
+        function init() {
+            var game = new typ0.Game();
+            game.init($('#screenContentPanel'), $('#fileUploadInput'));
+        }
+
+        $(document).ready(init);
+    </script>
 </body>
 
 </html>
